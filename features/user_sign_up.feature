@@ -1,4 +1,4 @@
-Feature: Sign up page
+Feature: Tempest Library
     Scenario: As a guest
                 I want to sign up
                 So that I can use the website
