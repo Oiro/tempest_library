@@ -26,6 +26,8 @@ RSpec.describe UsersController, type: :controller do
    # confirms redirect_to whichever the page
    #expect(subject).to redirect_to :action => :show
                                           
-   expect(subject).to redirect_to(users_url)
+   #expect(subject).to redirect_to(users_url)
+   expect(response).to redirect_to(users_url) 
+
   end
 end
