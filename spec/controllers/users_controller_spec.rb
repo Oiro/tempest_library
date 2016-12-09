@@ -13,13 +13,15 @@ RSpec.describe UsersController, type: :controller do
   end
 
   it "creates new user" do
-
+  
+   before_count = User.count
    #post :create, { :user => { :email => "moses@community.lakehub.co.ke"  }  }
    post:create, params: { user: {name: "Moses Okello", email: "moses@community.lakehub.co.ke", password: "qwerty", password_confirm: "qwerty"}  }
    
    # confirm the user is created
    # User.create(email: 'moses@community.lakehub.co.ke') 
-   expect(@user).to eq @user
+   # expect(@user).to eq @user
+   expect(User.count).not_to eq(before_count)
    # confirm the flash is showing
    expect(flash[:notice]).to have_content("Account successfully created")
 
@@ -28,6 +30,6 @@ RSpec.describe UsersController, type: :controller do
                                           
    #expect(subject).to redirect_to(users_url)
    expect(response).to redirect_to(users_url) 
-
+  
   end
 end
