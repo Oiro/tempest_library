@@ -34,30 +34,23 @@ RSpec.describe UsersController, type: :controller do
   end
 
   context "POST#CREATE" do
+  before(:each) do
+      post :create, params: { user: { name: "Moses Okello", email: "moses@community.lakehub.co.ke", password: "qwerty", password_confirm: "qwerty" } }
+  end
 
   it "saves user to the database" do
+     # before_count = User.count
+     # expect(User.count).not_to eq(before_count)
+     FactoryGirl.create(:user)
      
-      before_count = User.count
-
-      post :create, params: { user: { name: "Moses Okello", email: "moses@community.lakehub.co.ke", password: "qwerty", password_confirm: "qwerty" } }
-
-      expect(User.count).not_to eq(before_count)
-
   end
 
    it "shows the correct flash" do
-
-      post :create, params: { user: { name: "Moses Okello", email: "moses@community.lakehub.co.ke", password: "qwerty", password_confirm: "qwerty" } }
-   
       expect(flash[:notice]).to have_content("Account successfully created")
    end
 
   it "redirects to the user index " do
-
-      post :create, params: { user: { name: "Moses Okello", email: "moses@community.lakehub.co.ke", password: "qwerty", password_confirm: "qwerty" } }
       expect(response).to redirect_to(users_url)
-  
   end
-
   end
 end
