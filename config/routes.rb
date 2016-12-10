@@ -12,8 +12,9 @@ Rails.application.routes.draw do
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
-
+  patch 'edit/:id', to: 'users#edit'
   get 'edit' => 'users#edit'
-
-
+  put 'update' => 'users#update'
+ # put 'edit/:id', controller: 'users', action: :update
+ # resources :edit, only: [:new, :create, :edit, :update]
 end
