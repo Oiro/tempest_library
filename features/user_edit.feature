@@ -1,8 +1,8 @@
 Feature: Edit User
-		Scenario: As a guest user 
+		Scenario: As a registered user 
 				  I want to edit details in the database
 
 		Given am a registered user 
 		When I visit edit page
-		And edit the details of the user
-		And I should update the details
+		And  I edit my details
+		And  I should edit my details

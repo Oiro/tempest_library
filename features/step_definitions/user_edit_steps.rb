@@ -8,12 +8,12 @@ When(/^I visit edit page$/) do
     #get :edit user.id
 end
 
-And(/^edit the details of the user$/) do
+And(/^I edit my details$/) do
     # user = FactoryGirl.create(:user)
     get '/edit', id: @user
 end
 
-And(/^I should update the details$/) do
+And(/^I should edit my details$/) do
     #expect(response).to redirect_to(@user)
     #User.create(:user)
 end
