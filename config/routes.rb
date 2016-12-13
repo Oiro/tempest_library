@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   put 'update' => 'users#update'
   get 'users/:id/edit' => 'users#edit'
   #post 'users/:id/update' => 'users#update'
+  get 'user' => 'users#edit'
 end
