@@ -4,5 +4,5 @@ Feature: Edit User
 
 		Given am a registered user 
 		When I visit edit page
-		And  I edit my details 
-		And  I should update my details
+		And  I edit my details
+		And  I should see changes to my details
