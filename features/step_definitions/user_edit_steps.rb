@@ -7,8 +7,10 @@ When(/^I visit edit page$/) do
 end
 
 And(/^I edit my details$/) do
+
 end
 
 And(/^I should see changes to my details$/) do
+  
 end
 
