@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+  def index
+      @user = User.all
+  end
 
   def new
     @user = User.new
@@ -26,7 +29,7 @@ class UsersController < ApplicationController
     if @user.update_attributes(user_params)
       # Handle a successful update.
        flash[:success] = "Profile updated"
-       redirect_to @user
+       redirect_to @user 
     else
       render 'edit'
     end
