@@ -13,7 +13,7 @@ And(/^I edit my details$/) do
   @user = FactoryGirl.create(:user)
 end
 
-And(/^I visit edit page$/) do
+And(/^I visit the edit page$/) do
   visit edit_path(@user)
 end
 
