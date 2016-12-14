@@ -3,6 +3,6 @@ Feature: Edit User
 				  I want to edit details in the database
 
 		Given am a registered user 
-		And  I visit edit page
+		And  I visit the edit page
 		And  I fill in my details
 		And  I should see changes in the database
