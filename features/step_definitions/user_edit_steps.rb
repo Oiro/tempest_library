@@ -1,15 +1,4 @@
 Given(/^am a registered user$/) do
-    visit edit_path
-end
-
-When(/^I visit edit page$/) do
-    visit edit_path
-end
-
-And(/^I edit my details$/) do
-#visit login_path
-#fill_in 'Email', with: 'moses@community.lakehub.co.ke'
-#fill_in 'Password', with: 'qwerty'
   @user = FactoryGirl.create(:user)
 end
 
