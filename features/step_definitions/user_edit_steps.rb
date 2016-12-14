@@ -1,21 +1,26 @@
 Given(/^am a registered user$/) do
-    get '/edit'
-    #expect(response).to render_template(:edit)
+#visit login_path
+#fill_in 'Email', with: 'moses@community.lakehub.co.ke'
+#fill_in 'Password', with: 'qwerty'
+@user = FactoryGirl.create(:user)
 end
 
-When(/^I visit edit page$/) do
-    user = FactoryGirl.create(:user)
-    #get :edit user.id
+And(/^I visit edit page$/) do
+  #get '/edit'
+  visit edit_path(@user)
+  #visit '/users/:id/edit'
 end
 
 And(/^I edit my details$/) do
-    # user = FactoryGirl.create(:user)
-    get '/edit', id: @user
+#fill_in 'Name', with: 'Moses Okello'
+#fill_in 'Email', with: 'moses@community.lakehub.co.ke'
+fill_in('Password', with: 'outkast')
+#fill_in('Password confirm', with: 'outkast')
+click_button "Save changes"
 end
 
-And(/^I should edit my details$/) do
-    #expect(response).to redirect_to(@user)
-    #User.create(:user)
+And(/^I should see changes in the database$/) do
+
 end
 
 
