@@ -18,4 +18,6 @@
   get 'users/:id/edit' => 'users#edit'
   #post 'users/:id/update' => 'users#update'
   get 'user' => 'users#edit'
+  get 'books' => 'books#new'
+  post 'books' => 'books#create'
 end
