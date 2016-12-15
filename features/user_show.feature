@@ -5,4 +5,3 @@ Feature: Show User
          Given am a registered user
          When I visit the show page
          Then Details of the user are displayed
-         And I should see the users details
