@@ -20,4 +20,11 @@
   get 'user' => 'users#edit'
   get 'books' => 'books#new'
   post 'books' => 'books#create'
+  get 'edit' => 'books#edit'
+  get 'books' => 'books#show'
+  get 'books/:id/edit' => 'books#edit'
+  get 'books' => 'books#show'
+  put 'update' => 'books#update'
+  patch 'edit/:id', to: 'books#edit'
+  resources :books 
 end

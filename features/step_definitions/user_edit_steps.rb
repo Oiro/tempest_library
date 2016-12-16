@@ -15,6 +15,6 @@ click_button "Save changes"
 end
 
 And(/^I should see changes in the database$/) do
-
+   expect(:password).not_to eq 'qwerty'
 end
 
