@@ -15,6 +15,7 @@
   patch 'edit/:id', to: 'users#edit'
   get 'edit' => 'users#edit'
   put 'update' => 'users#update'
+  put 'users/:id' => 'users#update'
   get 'users/:id/edit' => 'users#edit'
   #post 'users/:id/update' => 'users#update'
   get 'user' => 'users#edit'
@@ -22,9 +23,11 @@
   post 'books' => 'books#create'
   get 'edit' => 'books#edit'
   get 'books' => 'books#show'
+  get 'books/:id' => 'books#show'
   get 'books/:id/edit' => 'books#edit'
   get 'books' => 'books#show'
   put 'update' => 'books#update'
+  put 'books/:id' => 'books#update'
   patch 'edit/:id', to: 'books#edit'
   resources :books 
 end
