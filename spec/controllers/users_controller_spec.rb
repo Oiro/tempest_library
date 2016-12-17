@@ -32,7 +32,9 @@ RSpec.describe UsersController, type: :controller do
       expect(response).to have_http_status(:success)
       expect(response).to render_template(:edit)
     end
+  end
 
+  context "PUT#UPDATE" do
     it "updates element details in the database" do
       user = FactoryGirl.create(:user)   
       get :edit, params: { id: user }   
@@ -40,9 +42,11 @@ RSpec.describe UsersController, type: :controller do
       expect(User.where(email: "bollocks@gmail.com")).to be_present
     end
   end
+  context "GET#SHOW" do
     it "returns an html form for displaying results" do
       get :show
       expect(response).to have_http_status(:success)
       expect(response).to render_template(:show)
     end
+  end
 end
