@@ -1,4 +1,4 @@
-Feature: Update Page
+Feature: User Update Page
 
     Scenario: As a registered user
               I should be able to update my details
