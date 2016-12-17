@@ -37,7 +37,6 @@ RSpec.describe UsersController, type: :controller do
   context "PUT#UPDATE" do
     it "updates element details in the database" do
       user = FactoryGirl.create(:user)   
-      get :edit, params: { id: user }   
       put :update, params: {  user:  { :email => "bollocks@gmail.com"}  }
       expect(User.where(email: "bollocks@gmail.com")).to be_present
     end
